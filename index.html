@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        color: brown;
+        background-color: wheat;
+      }
+      span {
+        border: 1px solid brown;
+        padding: 5px;
+        margin: 5px;
+        color: brown;
+        background-color: cornsilk;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Where ISS is at?</h1>
+    <p><span id="lat"></span></p>
+    <p><span id="long"></span></p>
+    <p><span id="velocity"></span></p>
+    <p><span id="altitude"></span></p>
+
+    <script>
+      const api_url = "https://api.wheretheiss.at/v1/satellites/25544";
+      async function getLocation() {
+        const response = await fetch(api_url);
+        const data = await response.json();
+        console.log(data);
+        const { latitude, longitude, velocity, altitude } = data;
+
+        document.getElementById("lat").textContent = "lat is: " + latitude;
+        document.getElementById("long").textContent = "long is: " + latitude;
+        document.getElementById("velocity").textContent =
+          "velocity is: " + latitude;
+        document.getElementById("altitude").textContent =
+          "altitude is: " + altitude;
+      }
+
+      getLocation();
+    </script>
+    <a href="2index.html">map</a>
+  </body>
+</html>
