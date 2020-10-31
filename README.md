@@ -1,5 +1,5 @@
 # Where_ISS_is_at
-The Web App displays the current location of International Space Station on the map using Leaflet Js & Openstreet maps to map the Coordinates. Help me add other features ありがとうございます。
+The Web App displays the current location and other details of International Space Station on the map using Leaflet Js & Openstreet maps to map the Coordinates. Help me add other features ありがとうございます。
 
 ### API Link - [Here](https://wheretheiss.at/w/developer)
 ### Demo - [Here](https://whereissis.surge.sh/2index.html)
